@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+}
+.header {
+    padding: 15px 0;
+    background-color: #ffffff;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border: 0px solid #008CFF;
+    padding-left:30px ;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px solid #008CFF;
+    width: 80%;
+    margin-left: 80px;
+}
+
+.logo-content-img {
+    border: solid 0px #42515f;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px);
+    /* background-color: #f7f7f7; */
+    /* background: linear-gradient(to bottom, #2193b0, #6dd5ed); */
+    padding: 30px 0 10px;
+    box-sizing: border-box;
+}
+
+.address-book-text {
+    font: normal normal bold 22px/25px Montserrat;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    letter-spacing: 0px;
+    color: #0e0d0d;
+    text-transform: uppercase;
+    margin-left: 45px;
+    animation: glow 3s ease-in-out linear infinite;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2193b0, 0 0 70px #2193b0, 0 0 80px #2193b0, 0 0 100px #2193b0, 0 0 150px #2193b0;
+}
+
+
+.address-book {
+    color: #42515F;
+}
+.head-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.person-detail-text {
+    font: normal normal bold 24px/25px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+}
+.person-count {
+    background-color: #008CFF;
+    color: #ffffff;
+    border-radius: 42%;
+    font-size: 16px;
+    width: 26px;
+    text-align: center;
+    display: inline-block;
+}
+
+.add-button {
+    font: normal normal normal 22px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    background: #008CFF 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 26px 8px 23px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 890px;                                                       /* margin-left  */
+}
+
+.add-button:hover{
+    background: #1594fc;
+    border: 2px solid #008CFF;
+    border-radius: 5px;
+    margin-top: -10px; 
+    animation: btnWiggle 3s infinite;
+}
+
+.table-main {
+    width: 89%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    min-width: 800px;
+    margin-top: 25px;
+}
+
+td,th {
+    text-align: left;
+    padding: 5px 8px;
+}
+
+th {
+    /* background: #cae3f7 0% 0% no-repeat padding-box; */
+    border-radius: 0px 0px 0px 0px;
+    text-align: left;
+    font: normal normal medium 18px/24px Roboto;
+    /* font-size: small; */
+    letter-spacing: 0px;
+    color: black;
+    text-transform: uppercase;
+    opacity: 1;
+    border: 0px solid #dddddd;
+    animation: glow 3s ease-in-out linear infinite;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2193b0, 0 0 70px #2193b0, 0 0 80px #2193b0, 0 0 100px #2193b0, 0 0 150px #2193b0;
+
+}
+
+tr:not(:first-child) {
+    background: #ffffff 0% 0% no repeat padding-box;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+}
+
+td {
+    font: normal normal normal 19px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    background-color: #27262680;
+    opacity: 1;
+    border-radius: 7px;
+    /* border-radius: 5px; */
+}
+
+td img {
+    cursor: pointer;
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+td img:first-child {
+    margin-right: 10px;
+}
+
+
+#background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+/*================================  animation :: add-wiggle ====================================*/
+@keyframes btnWiggle {
+	0% {-webkit-transform: rotate(0deg);}
+	5% {-webkit-transform: rotate(-1deg);}
+	10% {-webkit-transform: rotate(1deg);}
+	15% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(0deg);}
+}
+
+ /*================================  animation :: person_detail-glow ====================================*/ 
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2193b0, 0 0 70px #2193b0, 0 0 80px #2193b0, 0 0 100px #2193b0, 0 0 150px #2193b0;
+    }
+    50% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #2193b0, 0 0 80px #2193b0, 0 0 90px #2193b0, 0 0 110px #2193b0, 0 0 160px #2193b0;
+    }
+    100% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2193b0, 0 0 70px #2193b0, 0 0 80px #2193b0, 0 0 100px #2193b0, 0 0 150px #2193b0;
+    }
+  }
+
